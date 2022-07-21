@@ -1,0 +1,27 @@
+.rankingFotos{
+
+    width: 15%;
+    margin: 90px 120px;
+    float:left;
+    
+}
+
+.ft{
+    border-style: outset;
+    border-color: #AECFDF;
+    border-width: 8px;
+    border-radius: 7px;
+    margin: 5px;
+}
+
+.ft2{
+    border-color: #9F9FAD;
+    border-style: outset;
+    border-width: 8px;
+    border-radius: 7px;
+    margin: 5px;    
+}
+
+h3{
+    text-align: center;
+}

@@ -6,7 +6,7 @@ class Titulo_texto extends React.Component {
     render() {
         return (
             <div id='doacoes' style={{
-                marginTop: '80px',
+                marginTop: '100px',
                 textAlign: 'center',
                 fontFamily: 'Cagliostro'
                 

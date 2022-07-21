@@ -1,0 +1,10 @@
+.icon{
+    width: 50px;
+    float: right;
+    cursor: pointer;
+}
+
+.icon:hover{
+    background-color: slategrey;
+   
+}
