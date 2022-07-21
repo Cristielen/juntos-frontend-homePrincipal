@@ -12,13 +12,13 @@ class Ranking extends React.Component{
         super(props);
     
         this.state = {
-            filmes: []
+            rankins: []
         };
       }
 
       async componentDidMount(){
         const res = await api('');
-        this.setState({filmes: res.data});
+        this.setState({rankins: res.data});
     } 
 
     render(){
@@ -30,7 +30,7 @@ class Ranking extends React.Component{
             marginLeft:'330px',
             marginBottom: '50px'
           };
-          const {filmes} = this.state;
+          const {rankins} = this.state;
         return(
             <div style={divStyle}>
                 
@@ -43,10 +43,10 @@ class Ranking extends React.Component{
                         </tr>
                     </thead>
                     <tbody>
-                    {filmes.map(filme => (
-                        <tr key={filme.show.id}>
-                        <td>{filme.show.name}</td>
-                        <td>{filme.show.language}</td>
+                    {rankins.map(rank => (
+                        <tr key={rank.show.id}>
+                        <td>{rank.show.name}</td>
+                        <td>{rank.show.language}</td>
                         </tr>
                     ))}
                     </tbody>
