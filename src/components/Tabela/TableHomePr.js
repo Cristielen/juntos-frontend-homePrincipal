@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React from 'react';
 // import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
-import style from '../../css/tableStyle.module.css';
+// import style from '../../css/tableStyle.module.css';
 // import { Table, Thead, Tbody, Tr, Th, Td } from 'react-super-responsive-table';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import Form from 'react-bootstrap/Form';
@@ -17,14 +17,13 @@ class TableHomePr extends React.Component {
         super(props);
     
         this.state = {
-            filmes: [],
-            // busca: ''
+            doacoes: []
         };
       }
 
     async componentDidMount(){
         const res = await api('');
-        this.setState({filmes: res.data});
+        this.setState({doacoes: res.data});
     } 
 
     render() {
@@ -35,14 +34,15 @@ class TableHomePr extends React.Component {
             marginLeft:'330px',
             marginBottom: '50px'
           };
-        const {filmes} = this.state;
-        // const [busca, setBusca] = useState({busca: this.state.busca});
-        // const filmesBusca = filmes
-        // .filter((filme) => filme.starstsWith(busca));
+        const {doacoes} = this.state;
+   
+
+   
         return (
         
         <div>
-            {console.log(filmes)}
+            {console.log(doacoes)}
+
 
             <div className={style1.pesquisacep}>
                 
@@ -52,6 +52,7 @@ class TableHomePr extends React.Component {
                     // value={busca}
                     placeholder="  Digite o CEP para achar doações" 
                     // onChange={(ev) => setBusca(ev.target.value)}
+                    // onChance={handleChange}
                     />
                     {/* <Button type="submit" 
                     variant="outline-info" 
@@ -61,6 +62,7 @@ class TableHomePr extends React.Component {
                     </Button> */}
                 </InputGroup>
             </div>
+  
             
             {/* <div className={style.styleTable} > */}
             <div style={divStyle}> 
@@ -73,11 +75,11 @@ class TableHomePr extends React.Component {
                         </tr>
                     </thead>
                     <tbody>
-                    {filmes.map(filme => (
-                        <tr key={filme.show.id}>
-                            <td> {filme.show.name}</td>
-                            <td>{filme.show.type}</td>
-                            <td>{filme.show.language}</td>
+                    {doacoes.map(doacao => (
+                        <tr key={doacao.show.id}>
+                            <td> {doacao.show.name}</td>
+                            <td>{doacao.show.type}</td>
+                            <td>{doacao.show.language}</td>
                         </tr>
                         ))}
                     </tbody>
