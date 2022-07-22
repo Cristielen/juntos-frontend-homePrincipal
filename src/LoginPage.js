@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HomePublica from './components/HomePublica/homePublica';
 import LoginPage from './components/Login/login';
 // import Menu from './components/Menu';
 // import BannerPr from './components/Banners/bannerPr';
@@ -9,12 +8,12 @@ import LoginPage from './components/Login/login';
 // import Banner2 from './components/Banners/banner2';
 // import Rotas from './Rotas';
 
-function HomePrincipal() {
+function LoginPage() {
   return (
     <div className="App">
-      <HomePublica/>
+      <LoginPage/>
     </div>
   );
 }
 
-export default HomePrincipal;
+export default LoginPage;

@@ -49,9 +49,9 @@ class TableHomePr extends React.Component {
                 <InputGroup>
                     <Form.Control 
                     id="cep"
-                    value={busca}
+               //     value={busca}
                     placeholder="  Digite o CEP para achar doações" 
-                    onChange={(ev) => setBusca(ev.target.value)}
+                //    onChange={(ev) => setBusca(ev.target.value)}
                     />
                     {/* <Button type="submit" 
                     variant="outline-info" 

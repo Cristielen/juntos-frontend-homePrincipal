@@ -1,17 +1,25 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-// import { Routes, Route, BrowserRouter } from 'react-router-dom';
-// import Login from './components/Login/login';
+import { Routes, Route, BrowserRouter, Switch } from 'react-router-dom';
+import LoginPage from './components/Login/login';
 
-// export default class Rotas extends Component {
+export default class Rotas extends Component {
 
-//     render() {
-//         return (
-//             <BrowserRouter>
-//                 <Routes>
-//                     <Route PrivateRoute exct path="/login" element={<Login/>}/>
-//                 </Routes>
-//             </BrowserRouter>
-//         );
-//     }
-// }
+    render() {
+
+        const routes = [
+            { route : "/login", view : LoginPage, exact : false}
+        ]
+
+
+        return (
+            <BrowserRouter>
+                <Switch>
+                    {routes.map((route, index) => (
+                        <Route key={index} path={route.route} exact={route.exact} component={route.view} />
+                    ))}
+                </Switch>
+            </BrowserRouter>
+        );
+    }
+}
