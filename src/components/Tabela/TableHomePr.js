@@ -17,6 +17,7 @@ class TableHomePr extends React.Component {
         super(props);
     
         this.state = {
+
             doacoes: []
         };
       }
@@ -35,14 +36,12 @@ class TableHomePr extends React.Component {
             marginBottom: '50px'
           };
         const {doacoes} = this.state;
-   
 
    
         return (
         
         <div>
             {console.log(doacoes)}
-
 
             <div className={style1.pesquisacep}>
                 
